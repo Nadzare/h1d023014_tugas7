@@ -22,6 +22,8 @@ class _LoginPageState extends State<LoginPage> {
     SharedPreferences prefs = await SharedPreferences.getInstance();
     // Simpan Username ke local storage
     prefs.setString('username', _usernameController.text);
+    // Simpan waktu login
+    prefs.setString('loginTime', DateTime.now().toString().substring(0, 19));
   }
 
   // Fungsi untuk menampilkan input form
@@ -59,17 +61,58 @@ class _LoginPageState extends State<LoginPage> {
       context: context,
       builder: (context) {
         return AlertDialog(
-          title: Text(pesan),
+          shape: RoundedRectangleBorder(
+            borderRadius: BorderRadius.circular(20),
+          ),
+          title: Row(
+            children: [
+              Container(
+                padding: const EdgeInsets.all(8),
+                decoration: BoxDecoration(
+                  gradient: const LinearGradient(
+                    colors: [Color(0xFF00C853), Color(0xFF00E676)],
+                  ),
+                  borderRadius: BorderRadius.circular(8),
+                ),
+                child: Icon(
+                  pesan.contains('Berhasil') ? Icons.check_circle : Icons.error,
+                  color: Colors.white,
+                ),
+              ),
+              const SizedBox(width: 12),
+              Expanded(
+                child: Text(
+                  pesan,
+                  style: TextStyle(
+                    color: pesan.contains('Berhasil')
+                        ? const Color(0xFF00C853)
+                        : Colors.red,
+                    fontWeight: FontWeight.bold,
+                    fontSize: 16,
+                  ),
+                ),
+              ),
+            ],
+          ),
           actions: [
-            TextButton(
+            ElevatedButton(
+              style: ElevatedButton.styleFrom(
+                backgroundColor: const Color(0xFF00C853),
+                shape: RoundedRectangleBorder(
+                  borderRadius: BorderRadius.circular(8),
+                ),
+              ),
               child: const Text('OK'),
               onPressed: () {
-                Navigator.push(
-                  context,
-                  MaterialPageRoute(
-                    builder: (context) => alamat,
-                  ),
-                );
+                Navigator.pop(context);
+                if (pesan.contains('Berhasil')) {
+                  Navigator.pushReplacement(
+                    context,
+                    MaterialPageRoute(
+                      builder: (context) => alamat,
+                    ),
+                  );
+                }
               },
             ),
           ],

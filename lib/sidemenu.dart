@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:h1d023014_tugas7/home_page.dart';
 import 'package:h1d023014_tugas7/about_page.dart';
+import 'package:h1d023014_tugas7/todo_page.dart';
+import 'package:h1d023014_tugas7/profile_page.dart';
 
 class Sidemenu extends StatelessWidget {
   const Sidemenu({Key? key}) : super(key: key);
@@ -79,6 +81,34 @@ class Sidemenu extends StatelessWidget {
                   context,
                   MaterialPageRoute(
                     builder: (context) => const HomePage(),
+                  ),
+                );
+              },
+            ),
+            const SizedBox(height: 4),
+            _buildMenuItem(
+              context,
+              icon: Icons.checklist,
+              title: 'Daftar Tugas',
+              onTap: () {
+                Navigator.pushReplacement(
+                  context,
+                  MaterialPageRoute(
+                    builder: (context) => const TodoPage(),
+                  ),
+                );
+              },
+            ),
+            const SizedBox(height: 4),
+            _buildMenuItem(
+              context,
+              icon: Icons.person,
+              title: 'Profil',
+              onTap: () {
+                Navigator.pushReplacement(
+                  context,
+                  MaterialPageRoute(
+                    builder: (context) => const ProfilePage(),
                   ),
                 );
               },
