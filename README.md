@@ -14,6 +14,35 @@ Aplikasi Flutter modern dengan tema gradasi hijau yang mengimplementasikan **Rou
 
 ---
 
+## 📸 Screenshot Aplikasi
+
+### Login Page
+<img src="https://github.com/Nadzare/h1d023014_tugas7/blob/main/docs/login.png" width="300">
+
+Halaman login dengan form username dan password, dilengkapi dengan validasi dan design modern bergradasi hijau.
+
+### Home Page
+<img src="https://github.com/Nadzare/h1d023014_tugas7/blob/main/docs/home.png" width="300">
+
+Dashboard utama yang menampilkan sambutan personal dan quick action buttons untuk akses cepat ke fitur aplikasi.
+
+### Todo Page
+<img src="https://github.com/Nadzare/h1d023014_tugas7/blob/main/docs/tmbhtgs.png" width="300">
+
+Halaman daftar tugas dengan fitur tambah, edit, hapus, dan statistik real-time. Setiap tugas memiliki kategori dengan icon dan warna berbeda.
+
+### Profile Page
+<img src="https://github.com/Nadzare/h1d023014_tugas7/blob/main/docs/profil.png" width="300">
+
+Halaman profil user yang menampilkan informasi lengkap seperti username, email, role, dan waktu login terakhir, dilengkapi dengan tombol logout.
+
+### About Page
+<img src="https://github.com/Nadzare/h1d023014_tugas7/blob/main/docs/about.png" width="300">
+
+Halaman informasi aplikasi dengan design konsisten mengikuti tema gradasi hijau.
+
+---
+
 ## ✨ Fitur Utama
 
 ### 🔐 **Login System**
@@ -776,6 +805,51 @@ HomePage (Dashboard)
 - Quick Action Buttons → Akses cepat dari Home
 - Back Button → Kembali ke halaman sebelumnya
 
+**Flow Lengkap:**
+1. User membuka aplikasi → **Login Page**
+2. Input username: `admin`, password: `admin` → Validasi
+3. Jika benar → Simpan ke local storage → **Home Page**
+4. Dari Home → Akses quick actions atau buka side menu
+5. **Todo Page** → Tambah/Edit/Hapus tugas → Data tersimpan
+6. **Profile Page** → Lihat info → Logout → Kembali ke Login
+7. **About Page** → Lihat informasi aplikasi
+
+---
+
+## 🎥 Demo Fitur
+
+### 1. Login & Authentication
+- Input username dan password
+- Validasi credentials
+- Alert dialog untuk feedback (berhasil/gagal)
+- Simpan session ke local storage
+- Redirect ke home page
+
+### 2. Home Dashboard
+- Menampilkan username dari local storage
+- Quick action buttons ke Todo dan Profile
+- Side menu untuk navigasi lengkap
+- Design responsif dengan gradient background
+
+### 3. Todo List Management
+- **Create**: Tambah tugas baru dengan kategori
+- **Read**: Tampilkan semua tugas dengan statistik
+- **Update**: Checkbox untuk tandai selesai
+- **Delete**: Swipe ke kiri untuk hapus
+- Data persistent di local storage (JSON)
+
+### 4. Profile & Logout
+- Tampilkan info user dari local storage
+- Tracking waktu login terakhir
+- Konfirmasi dialog sebelum logout
+- Clear semua data saat logout
+
+### 5. Navigation System
+- 5 halaman dengan routing smooth
+- Side menu dengan 4 menu items
+- Navigation menggunakan Navigator API
+- Proper back stack management
+
 ---
 
 ## 💾 Data yang Disimpan di Local Storage
@@ -830,6 +904,21 @@ Aplikasi ini berhasil mengimplementasikan:
 - ✅ **Modern UI/UX** - Gradient, cards, animations, responsive
 
 Aplikasi ini cocok sebagai pembelajaran Flutter untuk pemula hingga menengah, karena mencakup berbagai konsep penting dalam pengembangan mobile app.
+
+---
+
+## 📂 Repository
+
+**GitHub**: [https://github.com/Nadzare/h1d023014_tugas7](https://github.com/Nadzare/h1d023014_tugas7)
+
+---
+
+## 👨‍💻 Pengembang
+
+**Nama**: Nadare Kafah Alfatiha  
+**NIM**: H1D023014  
+**Shift**: A >> F  
+**Mata Kuliah**: Pemrograman Mobile (Pertemuan 9)
 
 ---
 
